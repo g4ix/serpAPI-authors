@@ -1,8 +1,8 @@
 name,affiliations,author_id,cited_by,interests
-David La Barbera,Università Degli Studi Di Udine,MvN8wKEAAAAJ,138,Computer Science
-Michael Soprano,Postdoctoral Research Fellow at the University of Udine,ocK0qRUAAAAJ,208,Computer Science
-Kevin Roitero,University of Udine,1xd52jMAAAAJ,688,Artificial Intelligence
-Stefano Mizzaro,Full professor of Computer Science and Information Technology,2wvJC6IAAAAJ,4735,Information retrieval
-Damiano Spina,"School of Computing Technologies, RMIT University",sLzYrNYAAAAJ,2481,Information Retrieval
-Gianluca Demartini,Associate Professor at the University of Queensland,PCAiILsAAAAJ,5342,Information Retrieval
-Eddy Maddalena,"Università degli Studi di Udine, Italy",egHDpFkAAAAJ,553,Information Retrieval
+David La Barbera,Università Degli Studi Di Udine,MvN8wKEAAAAJ,139,Computer Science
+Michael Soprano,Postdoctoral Research Fellow at the University of Udine,ocK0qRUAAAAJ,210,"Computer Science, Crowdsourcing"
+Kevin Roitero,University of Udine,1xd52jMAAAAJ,690,"Artificial Intelligence, Crowdsourcing and Human Computation, Information Retrieval"
+Stefano Mizzaro,Full professor of Computer Science and Information Technology,2wvJC6IAAAAJ,4739,"Information retrieval, mobile systems, scholarly publishing, crowdsourcing, misinformation and fake news detection"
+Damiano Spina,"School of Computing Technologies, RMIT University",sLzYrNYAAAAJ,2483,"Information Retrieval, Text Analytics, Data Science, Evaluation, Human-AI Fact-checking"
+Gianluca Demartini,Associate Professor at the University of Queensland,PCAiILsAAAAJ,5348,"Information Retrieval, Semantic Web, Human Computation, Crowdsourcing"
+Eddy Maddalena,"Università degli Studi di Udine, Italy",egHDpFkAAAAJ,553,"Information Retrieval, Crowdsourcing, Data Science, Human Computation, Web science"
