@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 1000px;
+            height: 1000px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "David La Barbera", "label": "David La Barbera", "shape": "dot", "size": 10}, {"id": "Kevin Roitero", "label": "Kevin Roitero", "shape": "dot", "size": 10}, {"id": "Stefano Mizzaro", "label": "Stefano Mizzaro", "shape": "dot", "size": 10}, {"id": "Gianluca Demartini", "label": "Gianluca Demartini", "shape": "dot", "size": 10}, {"id": "Damiano Spina", "label": "Damiano Spina", "shape": "dot", "size": 10}, {"id": "Michael Soprano", "label": "Michael Soprano", "shape": "dot", "size": 10}, {"id": "Vincenzo Della Mea", "label": "Vincenzo Della Mea", "shape": "dot", "size": 10}, {"id": "Davide Ceolin", "label": "Davide Ceolin", "shape": "dot", "size": 10}, {"id": "Tim Draws", "label": "Tim Draws", "shape": "dot", "size": 10}, {"id": "Joel Mackenzie", "label": "Joel Mackenzie", "shape": "dot", "size": 10}, {"id": "Beatrice Portelli", "label": "Beatrice Portelli", "shape": "dot", "size": 10}, {"id": "Giuseppe Serra", "label": "Giuseppe Serra", "shape": "dot", "size": 10}, {"id": "Shaoyang Fan", "label": "Shaoyang Fan", "shape": "dot", "size": 10}, {"id": "Giuseppe Primiero", "label": "Giuseppe Primiero", "shape": "dot", "size": 10}, {"id": "Jan Wielemaker", "label": "Jan Wielemaker", "shape": "dot", "size": 10}, {"id": "Alessandro Checco", "label": "Alessandro Checco", "shape": "dot", "size": 10}, {"id": "Afshin Rahimi", "label": "Afshin Rahimi", "shape": "dot", "size": 10}, {"id": "Andrea Brunello", "label": "Andrea Brunello", "shape": "dot", "size": 10}, {"id": "Tetsuya Sakai", "label": "Tetsuya Sakai", "shape": "dot", "size": 10}, {"id": "Eddy Maddalena", "label": "Eddy Maddalena", "shape": "dot", "size": 10}, {"id": "Mihai Horia Popescu", "label": "Mihai Horia Popescu", "shape": "dot", "size": 10}, {"id": "Falk Scholer", "label": "Falk Scholer", "shape": "dot", "size": 10}, {"id": "J. Shane Culpepper", "label": "J. Shane Culpepper", "shape": "dot", "size": 10}, {"id": "Yunke Qu", "label": "Yunke Qu", "shape": "dot", "size": 10}, {"id": "Mark Sanderson", "label": "Mark Sanderson", "shape": "dot", "size": 10}, {"id": "Rishabh Mehrotra", "label": "Rishabh Mehrotra", "shape": "dot", "size": 10}, {"id": "Mounia Lalmas", "label": "Mounia Lalmas", "shape": "dot", "size": 10}, {"id": "Luca Vassena", "label": "Luca Vassena", "shape": "dot", "size": 10}, {"id": "Luca Di Gaspero", "label": "Luca Di Gaspero", "shape": "dot", "size": 10}, {"id": "Carlo Tasso", "label": "Carlo Tasso", "shape": "dot", "size": 10}, {"id": "Paolo Coppola", "label": "Paolo Coppola", "shape": "dot", "size": 10}, {"id": "Omar Alonso", "label": "Omar Alonso", "shape": "dot", "size": 10}, {"id": "Elena Nazzi", "label": "Elena Nazzi", "shape": "dot", "size": 10}, {"id": "Giorgio Brajnik", "label": "Giorgio Brajnik", "shape": "dot", "size": 10}, {"id": "Fabio Crestani", "label": "Fabio Crestani", "shape": "dot", "size": 10}, {"id": "Claudio Carpineto", "label": "Claudio Carpineto", "shape": "dot", "size": 10}, {"id": "Marco Pavan", "label": "Marco Pavan", "shape": "dot", "size": 10}, {"id": "Andrew Turpin", "label": "Andrew Turpin", "shape": "dot", "size": 10}, {"id": "Julio Gonzalo", "label": "Julio Gonzalo", "shape": "dot", "size": 10}, {"id": "Lawrence Cavedon", "label": "Lawrence Cavedon", "shape": "dot", "size": 10}, {"id": "Johanne R. Trippas", "label": "Johanne R. Trippas", "shape": "dot", "size": 10}, {"id": "Jorge Carrillo-de-Albornoz", "label": "Jorge Carrillo-de-Albornoz", "shape": "dot", "size": 10}, {"id": "Maarten de Rijke", "label": "Maarten de Rijke", "shape": "dot", "size": 10}, {"id": "Arkaitz Zubiaga", "label": "Arkaitz Zubiaga", "shape": "dot", "size": 10}, {"id": "Hideo Joho", "label": "Hideo Joho", "shape": "dot", "size": 10}, {"id": "Edgar Meij", "label": "Edgar Meij", "shape": "dot", "size": 10}, {"id": "Flora Salim", "label": "Flora Salim", "shape": "dot", "size": 10}, {"id": "W. Bruce Croft", "label": "W. Bruce Croft", "shape": "dot", "size": 10}, {"id": "V\u00edctor Fresno", "label": "V\u00edctor Fresno", "shape": "dot", "size": 10}, {"id": "Raquel Martinez", "label": "Raquel Martinez", "shape": "dot", "size": 10}, {"id": "Yongli Ren", "label": "Yongli Ren", "shape": "dot", "size": 10}, {"id": "Ryen W. White", "label": "Ryen W. White", "shape": "dot", "size": 10}, {"id": "Philippe Cudre-Mauroux", "label": "Philippe Cudre-Mauroux", "shape": "dot", "size": 10}, {"id": "Djellel Difallah", "label": "Djellel Difallah", "shape": "dot", "size": 10}, {"id": "Ujwal Gadiraju", "label": "Ujwal Gadiraju", "shape": "dot", "size": 10}, {"id": "Tereza Iofciu", "label": "Tereza Iofciu", "shape": "dot", "size": 10}, {"id": "Michele Catasta", "label": "Michele Catasta", "shape": "dot", "size": 10}, {"id": "Wolfgang Nejdl", "label": "Wolfgang Nejdl", "shape": "dot", "size": 10}, {"id": "Lei Han", "label": "Lei Han", "shape": "dot", "size": 10}, {"id": "Shazia Sadiq", "label": "Shazia Sadiq", "shape": "dot", "size": 10}, {"id": "Peter A Bath", "label": "Peter A Bath", "shape": "dot", "size": 10}, {"id": "Dr. Wasim Ahmed, PhD", "label": "Dr. Wasim Ahmed, PhD", "shape": "dot", "size": 10}, {"id": "Karl Aberer", "label": "Karl Aberer", "shape": "dot", "size": 10}, {"id": "Alberto Tonon", "label": "Alberto Tonon", "shape": "dot", "size": 10}, {"id": "Laura Sbaffi", "label": "Laura Sbaffi", "shape": "dot", "size": 10}, {"id": "Claudiu S. Firan", "label": "Claudiu S. Firan", "shape": "dot", "size": 10}, {"id": "Elena Simperl", "label": "Elena Simperl", "shape": "dot", "size": 10}, {"id": "Cristina Sarasua", "label": "Cristina Sarasua", "shape": "dot", "size": 10}, {"id": "Luis-Daniel Ib\u00e1\u00f1ez", "label": "Luis-Daniel Ib\u00e1\u00f1ez", "shape": "dot", "size": 10}, {"id": "Marco Basaldella", "label": "Marco Basaldella", "shape": "dot", "size": 10}, {"id": "Mattia Zeni", "label": "Mattia Zeni", "shape": "dot", "size": 10}, {"id": "Dante Degl\u0027Innocenti", "label": "Dante Degl\u0027Innocenti", "shape": "dot", "size": 10}, {"id": "Pavlos Vougiouklis", "label": "Pavlos Vougiouklis", "shape": "dot", "size": 10}, {"id": "Jonathon Hare", "label": "Jonathon Hare", "shape": "dot", "size": 10}, {"id": "Carlo Alberto Beltrami", "label": "Carlo Alberto Beltrami", "shape": "dot", "size": 10}, {"id": "Richard Gomer", "label": "Richard Gomer", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "David La Barbera", "to": "Kevin Roitero", "weight": 1}, {"from": "David La Barbera", "to": "Stefano Mizzaro", "weight": 1}, {"from": "David La Barbera", "to": "Gianluca Demartini", "weight": 1}, {"from": "David La Barbera", "to": "Damiano Spina", "weight": 1}, {"from": "David La Barbera", "to": "Michael Soprano", "weight": 1}, {"from": "David La Barbera", "to": "Vincenzo Della Mea", "weight": 1}, {"from": "David La Barbera", "to": "Davide Ceolin", "weight": 1}, {"from": "David La Barbera", "to": "Tim Draws", "weight": 1}, {"from": "David La Barbera", "to": "Joel Mackenzie", "weight": 1}, {"from": "Michael Soprano", "to": "Kevin Roitero", "weight": 1}, {"from": "Michael Soprano", "to": "Stefano Mizzaro", "weight": 1}, {"from": "Michael Soprano", "to": "Gianluca Demartini", "weight": 1}, {"from": "Michael Soprano", "to": "Damiano Spina", "weight": 1}, {"from": "Michael Soprano", "to": "Davide Ceolin", "weight": 1}, {"from": "Michael Soprano", "to": "Vincenzo Della Mea", "weight": 1}, {"from": "Michael Soprano", "to": "Beatrice Portelli", "weight": 1}, {"from": "Michael Soprano", "to": "Giuseppe Serra", "weight": 1}, {"from": "Michael Soprano", "to": "Shaoyang Fan", "weight": 1}, {"from": "Michael Soprano", "to": "Giuseppe Primiero", "weight": 1}, {"from": "Michael Soprano", "to": "Jan Wielemaker", "weight": 1}, {"from": "Michael Soprano", "to": "Tim Draws", "weight": 1}, {"from": "Michael Soprano", "to": "Alessandro Checco", "weight": 1}, {"from": "Michael Soprano", "to": "Afshin Rahimi", "weight": 1}, {"from": "Michael Soprano", "to": "Andrea Brunello", "weight": 1}, {"from": "Michael Soprano", "to": "Tetsuya Sakai", "weight": 1}, {"from": "Michael Soprano", "to": "Eddy Maddalena", "weight": 1}, {"from": "Kevin Roitero", "to": "Stefano Mizzaro", "weight": 1}, {"from": "Kevin Roitero", "to": "Gianluca Demartini", "weight": 1}, {"from": "Kevin Roitero", "to": "Eddy Maddalena", "weight": 1}, {"from": "Kevin Roitero", "to": "Vincenzo Della Mea", "weight": 1}, {"from": "Kevin Roitero", "to": "Damiano Spina", "weight": 1}, {"from": "Kevin Roitero", "to": "Alessandro Checco", "weight": 1}, {"from": "Kevin Roitero", "to": "Beatrice Portelli", "weight": 1}, {"from": "Kevin Roitero", "to": "Mihai Horia Popescu", "weight": 1}, {"from": "Kevin Roitero", "to": "Davide Ceolin", "weight": 1}, {"from": "Kevin Roitero", "to": "Falk Scholer", "weight": 1}, {"from": "Kevin Roitero", "to": "J. Shane Culpepper", "weight": 1}, {"from": "Kevin Roitero", "to": "Andrea Brunello", "weight": 1}, {"from": "Kevin Roitero", "to": "Shaoyang Fan", "weight": 1}, {"from": "Kevin Roitero", "to": "Yunke Qu", "weight": 1}, {"from": "Kevin Roitero", "to": "Mark Sanderson", "weight": 1}, {"from": "Kevin Roitero", "to": "Rishabh Mehrotra", "weight": 1}, {"from": "Kevin Roitero", "to": "Mounia Lalmas", "weight": 1}, {"from": "Kevin Roitero", "to": "Tim Draws", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Vincenzo Della Mea", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Gianluca Demartini", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Eddy Maddalena", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Luca Vassena", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Luca Di Gaspero", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Damiano Spina", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Carlo Tasso", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Paolo Coppola", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Falk Scholer", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Omar Alonso", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Mark Sanderson", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Elena Nazzi", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Giorgio Brajnik", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Fabio Crestani", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Claudio Carpineto", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Marco Pavan", "weight": 1}, {"from": "Stefano Mizzaro", "to": "Andrew Turpin", "weight": 1}, {"from": "Damiano Spina", "to": "Mark Sanderson", "weight": 1}, {"from": "Damiano Spina", "to": "Falk Scholer", "weight": 1}, {"from": "Damiano Spina", "to": "Julio Gonzalo", "weight": 1}, {"from": "Damiano Spina", "to": "Lawrence Cavedon", "weight": 1}, {"from": "Damiano Spina", "to": "Johanne R. Trippas", "weight": 1}, {"from": "Damiano Spina", "to": "Gianluca Demartini", "weight": 1}, {"from": "Damiano Spina", "to": "Jorge Carrillo-de-Albornoz", "weight": 1}, {"from": "Damiano Spina", "to": "Maarten de Rijke", "weight": 1}, {"from": "Damiano Spina", "to": "Arkaitz Zubiaga", "weight": 1}, {"from": "Damiano Spina", "to": "Hideo Joho", "weight": 1}, {"from": "Damiano Spina", "to": "Edgar Meij", "weight": 1}, {"from": "Damiano Spina", "to": "Flora Salim", "weight": 1}, {"from": "Damiano Spina", "to": "W. Bruce Croft", "weight": 1}, {"from": "Damiano Spina", "to": "V\u00edctor Fresno", "weight": 1}, {"from": "Damiano Spina", "to": "Raquel Martinez", "weight": 1}, {"from": "Damiano Spina", "to": "Yongli Ren", "weight": 1}, {"from": "Damiano Spina", "to": "Ryen W. White", "weight": 1}, {"from": "Gianluca Demartini", "to": "Philippe Cudre-Mauroux", "weight": 1}, {"from": "Gianluca Demartini", "to": "Djellel Difallah", "weight": 1}, {"from": "Gianluca Demartini", "to": "Alessandro Checco", "weight": 1}, {"from": "Gianluca Demartini", "to": "Ujwal Gadiraju", "weight": 1}, {"from": "Gianluca Demartini", "to": "Tereza Iofciu", "weight": 1}, {"from": "Gianluca Demartini", "to": "Michele Catasta", "weight": 1}, {"from": "Gianluca Demartini", "to": "Wolfgang Nejdl", "weight": 1}, {"from": "Gianluca Demartini", "to": "Lei Han", "weight": 1}, {"from": "Gianluca Demartini", "to": "Shazia Sadiq", "weight": 1}, {"from": "Gianluca Demartini", "to": "Peter A Bath", "weight": 1}, {"from": "Gianluca Demartini", "to": "Dr. Wasim Ahmed, PhD", "weight": 1}, {"from": "Gianluca Demartini", "to": "Eddy Maddalena", "weight": 1}, {"from": "Gianluca Demartini", "to": "Karl Aberer", "weight": 1}, {"from": "Gianluca Demartini", "to": "Alberto Tonon", "weight": 1}, {"from": "Gianluca Demartini", "to": "Laura Sbaffi", "weight": 1}, {"from": "Gianluca Demartini", "to": "Claudiu S. Firan", "weight": 1}, {"from": "Eddy Maddalena", "to": "Alessandro Checco", "weight": 1}, {"from": "Eddy Maddalena", "to": "Elena Simperl", "weight": 1}, {"from": "Eddy Maddalena", "to": "Falk Scholer", "weight": 1}, {"from": "Eddy Maddalena", "to": "Lei Han", "weight": 1}, {"from": "Eddy Maddalena", "to": "Andrew Turpin", "weight": 1}, {"from": "Eddy Maddalena", "to": "Ujwal Gadiraju", "weight": 1}, {"from": "Eddy Maddalena", "to": "Cristina Sarasua", "weight": 1}, {"from": "Eddy Maddalena", "to": "Luis-Daniel Ib\u00e1\u00f1ez", "weight": 1}, {"from": "Eddy Maddalena", "to": "Vincenzo Della Mea", "weight": 1}, {"from": "Eddy Maddalena", "to": "Marco Basaldella", "weight": 1}, {"from": "Eddy Maddalena", "to": "Mattia Zeni", "weight": 1}, {"from": "Eddy Maddalena", "to": "Dante Degl\u0027Innocenti", "weight": 1}, {"from": "Eddy Maddalena", "to": "Pavlos Vougiouklis", "weight": 1}, {"from": "Eddy Maddalena", "to": "Jonathon Hare", "weight": 1}, {"from": "Eddy Maddalena", "to": "Carlo Alberto Beltrami", "weight": 1}, {"from": "Eddy Maddalena", "to": "Richard Gomer", "weight": 1}, {"from": "Eddy Maddalena", "to": "Davide Ceolin", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

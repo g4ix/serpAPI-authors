@@ -1,128 +1,82 @@
 author1,author2
-David La Barbera,Kevin Roitero
-David La Barbera,Stefano Mizzaro
-David La Barbera,Gianluca Demartini
-David La Barbera,Damiano Spina
-David La Barbera,Michael Soprano
-David La Barbera,Vincenzo Della Mea
-David La Barbera,Davide Ceolin
-David La Barbera,Tim Draws
-David La Barbera,Joel Mackenzie
-Michael Soprano,Kevin Roitero
-Michael Soprano,Stefano Mizzaro
-Michael Soprano,Gianluca Demartini
-Michael Soprano,Damiano Spina
-Michael Soprano,Davide Ceolin
-Michael Soprano,David La Barbera
-Michael Soprano,Vincenzo Della Mea
-Michael Soprano,Beatrice Portelli
-Michael Soprano,Giuseppe Serra
-Michael Soprano,Shaoyang Fan
-Michael Soprano,Giuseppe Primiero
-Michael Soprano,Jan Wielemaker
-Michael Soprano,Tim Draws
-Michael Soprano,Alessandro Checco
-Michael Soprano,Afshin Rahimi
-Michael Soprano,Andrea Brunello
-Michael Soprano,Tetsuya Sakai
-Michael Soprano,Eddy Maddalena
-Kevin Roitero,Stefano Mizzaro
-Kevin Roitero,Gianluca Demartini
-Kevin Roitero,Michael Soprano
-Kevin Roitero,Eddy Maddalena
-Kevin Roitero,Vincenzo Della Mea
-Kevin Roitero,Damiano Spina
-Kevin Roitero,David La Barbera
-Kevin Roitero,Alessandro Checco
-Kevin Roitero,Beatrice Portelli
-Kevin Roitero,Mihai Horia Popescu
-Kevin Roitero,Davide Ceolin
-Kevin Roitero,Falk Scholer
-Kevin Roitero,J. Shane Culpepper
-Kevin Roitero,Andrea Brunello
-Kevin Roitero,Shaoyang Fan
-Kevin Roitero,Yunke Qu
-Kevin Roitero,Mark Sanderson
-Kevin Roitero,Rishabh Mehrotra
-Kevin Roitero,Mounia Lalmas
-Kevin Roitero,Tim Draws
-Stefano Mizzaro,Kevin Roitero
-Stefano Mizzaro,Vincenzo Della Mea
-Stefano Mizzaro,Gianluca Demartini
-Stefano Mizzaro,Eddy Maddalena
-Stefano Mizzaro,Luca Vassena
-Stefano Mizzaro,Luca Di Gaspero
-Stefano Mizzaro,Damiano Spina
-Stefano Mizzaro,Michael Soprano
-Stefano Mizzaro,Carlo Tasso
-Stefano Mizzaro,Paolo Coppola
-Stefano Mizzaro,Falk Scholer
-Stefano Mizzaro,Omar Alonso
-Stefano Mizzaro,Mark Sanderson
-Stefano Mizzaro,David La Barbera
-Stefano Mizzaro,Elena Nazzi
-Stefano Mizzaro,Giorgio Brajnik
-Stefano Mizzaro,Fabio Crestani
-Stefano Mizzaro,Claudio Carpineto
-Stefano Mizzaro,Marco Pavan
-Stefano Mizzaro,Andrew Turpin
-Damiano Spina,Mark Sanderson
-Damiano Spina,Falk Scholer
-Damiano Spina,Julio Gonzalo
-Damiano Spina,Lawrence Cavedon
-Damiano Spina,Johanne R. Trippas
-Damiano Spina,Stefano Mizzaro
-Damiano Spina,Gianluca Demartini
-Damiano Spina,Jorge Carrillo-de-Albornoz
-Damiano Spina,Kevin Roitero
-Damiano Spina,Maarten de Rijke
-Damiano Spina,Arkaitz Zubiaga
-Damiano Spina,Hideo Joho
-Damiano Spina,Edgar Meij
-Damiano Spina,Flora Salim
-Damiano Spina,Michael Soprano
-Damiano Spina,W. Bruce Croft
-Damiano Spina,Víctor Fresno
-Damiano Spina,Raquel Martinez
-Damiano Spina,Yongli Ren
-Damiano Spina,Ryen W. White
-Gianluca Demartini,Philippe Cudre-Mauroux
-Gianluca Demartini,Djellel Difallah
-Gianluca Demartini,Kevin Roitero
-Gianluca Demartini,Stefano Mizzaro
-Gianluca Demartini,Alessandro Checco
-Gianluca Demartini,Ujwal Gadiraju
-Gianluca Demartini,Tereza Iofciu
-Gianluca Demartini,Michele Catasta
-Gianluca Demartini,Wolfgang Nejdl
-Gianluca Demartini,Lei Han
-Gianluca Demartini,Shazia Sadiq
-Gianluca Demartini,Peter A Bath
-Gianluca Demartini,Damiano Spina
-Gianluca Demartini,"Dr. Wasim Ahmed, PhD"
-Gianluca Demartini,Eddy Maddalena
-Gianluca Demartini,Karl Aberer
-Gianluca Demartini,Alberto Tonon
-Gianluca Demartini,Michael Soprano
-Gianluca Demartini,Laura Sbaffi
-Gianluca Demartini,Claudiu S. Firan
-Eddy Maddalena,Stefano Mizzaro
-Eddy Maddalena,Kevin Roitero
-Eddy Maddalena,Gianluca Demartini
-Eddy Maddalena,Alessandro Checco
-Eddy Maddalena,Elena Simperl
-Eddy Maddalena,Falk Scholer
-Eddy Maddalena,Lei Han
-Eddy Maddalena,Andrew Turpin
-Eddy Maddalena,Ujwal Gadiraju
-Eddy Maddalena,Cristina Sarasua
-Eddy Maddalena,Luis-Daniel Ibáñez
-Eddy Maddalena,Vincenzo Della Mea
-Eddy Maddalena,Marco Basaldella
-Eddy Maddalena,Mattia Zeni
-Eddy Maddalena,Dante Degl'Innocenti
-Eddy Maddalena,Pavlos Vougiouklis
-Eddy Maddalena,Jonathon Hare
-Eddy Maddalena,Carlo Alberto Beltrami
-Eddy Maddalena,Richard Gomer
-Eddy Maddalena,Davide Ceolin
+Afshin Rahimi,Timothy Baldwin
+Afshin Rahimi,Trevor Cohn
+Afshin Rahimi,Walid Magdy
+Afshin Rahimi,Norah Abokhodair
+Afshin Rahimi,Kareem Darwish
+Afshin Rahimi,Duy Q. Vu
+Afshin Rahimi,Bo HAN
+Afshin Rahimi,Leon Derczynski
+Afshin Rahimi,Mahmood Neshati
+Afshin Rahimi,Hassan Abolhassani
+Afshin Rahimi,Ali Alijamaat
+Afshin Rahimi,Gaurav Arora
+Afshin Rahimi,Shivashankar Subramanian
+Afshin Rahimi,Alan Ritter
+Afshin Rahimi,Yuan Li
+Afshin Rahimi,Dirk Hovy
+Afshin Rahimi,Julian Brooke
+Afshin Rahimi,"Wei ""Coco"" Xu"
+Afshin Rahimi,Karin Verspoor
+Afshin Rahimi,Long Duong
+Andrea Brunello,Angelo Montanari
+Andrea Brunello,Guido Sciavicco
+Andrea Brunello,Nicola Saccomanno
+Andrea Brunello,Andrea Urgolo
+Andrea Brunello,Federico Pittino
+Andrea Brunello,Dario Della Monica
+Andrea Brunello,Kevin Roitero
+Andrea Brunello,Stefano Mizzaro
+Andrea Brunello,Mark Reynolds
+Andrea Brunello,FERNANDO JIMENEZ
+Andrea Brunello,Gracia Sánchez Carpena
+Andrea Brunello,Eduard Ionel STAN
+Andrea Brunello,Giuseppe Serra
+Andrea Brunello,András Montvay
+Andrea Brunello,Paolo Gallo
+Andrea Brunello,Joanna Kamińska
+Andrea Brunello,Michael Soprano
+Andrea Brunello,Jose Palma
+Andrea Brunello,Lucilla Iacumin
+Andrea Brunello,Martin Kraft
+Andrew Turpin,Allison M McKendrick
+Andrew Turpin,Falk Scholer
+Andrew Turpin,Alistair Moffat
+Andrew Turpin,Simon J. Puglisi
+Andrew Turpin,Jonathan Denniss
+Andrew Turpin,W F Smyth
+Andrew Turpin,"William Hersh, MD, FACP, FACMI, FA..."
+Andrew Turpin,Luke X Chong
+Andrew Turpin,Mingfang Wu
+Andrew Turpin,Roy W. Beck
+Andrew Turpin,Algis J Vingrys
+Andrew Turpin,Eileen E Birch
+Andrew Turpin,Michael Wall
+Andrew Turpin,David J Lawson
+Andrew Turpin,Sarvnaz Karimi
+Andrew Turpin,Paul H Artes
+Andrew Turpin,Shonraj Ballae Ganeshrao
+Andrew Turpin,Robyn Guymer
+Andrew Turpin,Stefano Mizzaro
+Andrew Turpin,Mark Sanderson
+Arkaitz Zubiaga,Maria Liakata
+Arkaitz Zubiaga,Rob Procter
+Arkaitz Zubiaga,Víctor Fresno
+Arkaitz Zubiaga,Kalina Bontcheva
+Arkaitz Zubiaga,Raquel Martinez
+Arkaitz Zubiaga,Elena Kochkina
+Arkaitz Zubiaga,ahmet aker
+Arkaitz Zubiaga,Peter Tolmie
+Arkaitz Zubiaga,Michal Lukasik
+Arkaitz Zubiaga,Leon Derczynski
+Arkaitz Zubiaga,Iñaki Alegria
+Arkaitz Zubiaga,Heng Ji
+Arkaitz Zubiaga,Iñaki San Vicente Roncal
+Arkaitz Zubiaga,Alberto Pérez García-Plaza
+Arkaitz Zubiaga,Rabab Ahmed Alkhalifa
+Arkaitz Zubiaga,Damiano Spina
+Arkaitz Zubiaga,Nora Aranberri
+Arkaitz Zubiaga,Trevor Cohn
+Arkaitz Zubiaga,pablo gamallo
+Arkaitz Zubiaga,Adam Tsakalidis
+Carlo Alberto Beltrami,Antonio Paolo Beltrami
